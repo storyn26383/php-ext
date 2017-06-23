@@ -2,6 +2,6 @@
 Test foo
 --FILE--
 <?php
-sasaya_hello();
+print_r(sasaya_hello());
 --EXPECT--
 Hello Sasaya

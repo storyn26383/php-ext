@@ -38,6 +38,5 @@ PHP_MINFO_FUNCTION(sasaya) {
 
 // Your functions here...
 PHP_FUNCTION(sasaya_hello) {
-    php_printf("Hello Sasaya");
-    RETURN_TRUE;
+    RETURN_STRING("Hello Sasaya");
 }
