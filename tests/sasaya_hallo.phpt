@@ -1,5 +1,5 @@
 --TEST--
-Test foo
+Test sasaya_hello
 --FILE--
 <?php
 print_r(sasaya_hello());
