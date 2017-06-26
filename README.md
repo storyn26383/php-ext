@@ -1,4 +1,4 @@
-# PHP Extension
+# PHP Extension Skeleton
 
 ```sh
 phpize
