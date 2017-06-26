@@ -85,9 +85,5 @@ PHP_METHOD(SasayaClass, setName) {
         return;
     }
 
-    this = getThis();
-
-    zend_update_property(sasaya_class_entry, this, "name", sizeof("name") - 1, name);
-
-    RETURN_ZVAL(this, 0, 0);
+    zend_update_property(sasaya_class_entry, getThis(), "name", sizeof("name") - 1, name);
 }
