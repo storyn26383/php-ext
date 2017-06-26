@@ -39,7 +39,7 @@ PHP_MINIT_FUNCTION(sasaya) {
 
     INIT_CLASS_ENTRY(ce, "SasayaClass", sasaya_class_functions);
 
-    sasaya_class_entry = zend_register_internal_class(&ce TSRMLS_CC);
+    sasaya_class_entry = zend_register_internal_class(&ce);
 
     zend_declare_property_string(sasaya_class_entry, "name", sizeof("name") - 1, "World", ZEND_ACC_PROTECTED);
 
@@ -81,7 +81,7 @@ PHP_METHOD(SasayaClass, hello) {
 PHP_METHOD(SasayaClass, setName) {
     zval *this, *name;
 
-    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "z", &name) == FAILURE) {
+    if (zend_parse_parameters(ZEND_NUM_ARGS(), "z", &name) == FAILURE) {
         return;
     }
 
