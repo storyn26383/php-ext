@@ -82,7 +82,7 @@ PHP_METHOD(SasayaClass, setName) {
     zval *this, *name;
 
     if (zend_parse_parameters(ZEND_NUM_ARGS(), "z", &name) == FAILURE) {
-        return;
+        RETURN_NULL();
     }
 
     zend_update_property(sasaya_class_entry, getThis(), "name", sizeof("name") - 1, name);
